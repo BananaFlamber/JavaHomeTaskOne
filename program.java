@@ -4,6 +4,7 @@ public class program {
         int numbB = 5;
 //        System.out.println(checkMethod(numbA, numbB));
 //        checkNumb(numbA);
+//        System.out.println(checkNumBool(numbA));
     }
     public static boolean checkMethod(int numbA,int numbB) {
         return numbA + numbB >= 10 && numbA + numbB <= 20;
@@ -16,6 +17,9 @@ public class program {
             System.out.println("Число отрицательное");
         }
     }
+    public static boolean checkNumBool(int numbA) {
+        return numbA < 0;
+    }
 
-}
+    }
 
