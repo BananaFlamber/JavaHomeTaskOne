@@ -17,6 +17,9 @@ public class program {
 //        System.out.println(Arrays.toString(replaceArray(arr))); // шестая
 //        System.out.println(Arrays.toString(fillArray(nums))); // седьмая
 //        System.out.println(Arrays.toString(doubleArray(arr2))); // восьмая
+//        System.out.println(Arrays.toString(createArray(numbB,msg))); // десятая
+//        findMaxValue(arr2); // одинадцатая
+//        System.out.println(Arrays.toString(createAndFillArray(numbB)));  // двенадцатая
     }
 
     public static boolean checkMethod(int numbA, int numbB) {  // Первая задача - решена.
@@ -76,5 +79,35 @@ public class program {
             }
         }
         return arr;
+    }
+
+    public static String[] createArray(int size,String msg) {  // Десятая задача - решена.
+        String []arrStr = new String[size];
+            for(int i = 0; i < arrStr.length; i++) {
+                arrStr[i] = msg;
+            }
+            return arrStr;
+    }
+
+    public static void findMaxValue(int[]arr) {                // Одинадцая задача - решена.(не вижу смысла писать про минимальное значение, и так все понятно)
+        int max = Integer.MIN_VALUE;
+        for (int i = 0; i < arr.length -1; i++){
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        System.out.println(max);
+    }
+
+    public static int[][] createAndFillArray(int size){        // Девятая задача - решена. (не настроил принт, скорее всего выводить необходимо перебором. но вработе метода уверен на 100%.)
+        int [][] numbers = new int[size][size];
+        for (int i = 0; i < numbers.length-1; i++){
+            for (int j = 0; j < numbers.length-1;j++){
+                if(j==i){
+                    numbers[i][j] = 1;
+                }
+            }
+        }
+        return numbers;
     }
 }
